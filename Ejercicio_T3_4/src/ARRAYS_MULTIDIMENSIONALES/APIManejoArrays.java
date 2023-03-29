@@ -27,7 +27,9 @@ public class APIManejoArrays {
             }
             if (i >= 10) {
                 arrInt1[i] = 1;
+                
             }
+            
             if (i >= 20) {
                 arrInt1[i] = 0;
             }
