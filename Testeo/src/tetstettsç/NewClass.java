@@ -11,16 +11,27 @@ package tetstettsç;
  * @param 
  */
 public class NewClass {
-    public static void main(String[] args) {
-        int cont = 0;
-        int cont2 = 0;
-        int cont3 = 1;
-        
-        for(int i= 0; i < 10; i++){
-            cont = cont2 + cont3;
-            cont2 = cont;
-            cont3 = cont2 + cont3;
-            System.out.println(cont);
+    public static int Metodo (int x , int y){
+        if (x <= 0 || y<=0) {
+            System.out.println("No deben ser negativos");
+            return -1;
         }
+        if (x == 1 || y ==1){
+            return 1;
+        }
+        while(x != y){
+            if (x > y) {
+                x = x -y;
+            } else {
+                y = y- x;
+            }
+        }
+        return x;
+    }
+    public static void main(String[] args) {
+        int x, y;
+        x = 4;
+        y = 8;
+        System.out.println(Metodo(x,y));
     }
 }
