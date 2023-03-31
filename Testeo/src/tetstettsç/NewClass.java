@@ -29,6 +29,7 @@ public class NewClass {
         return x;
     }
     public static void main(String[] args) {
+        
         int x, y;
         x = 4;
         y = 8;
