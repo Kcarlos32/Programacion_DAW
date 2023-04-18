@@ -8,10 +8,8 @@ package ficheros_ej;
  *
  * @author carcas
  */
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
@@ -20,29 +18,39 @@ public class Ficheros_Ej4 {
 
     public static void main(String[] args) throws IOException {
         Scanner tcl = new Scanner(System.in);
-        
-        BufferedReader br = null;
-        BufferedWriter bw = null;
+
+        BufferedWriter bw1 = null;
+        BufferedWriter bw2 = null;
 
         String dni = "DNI.txt";
         String nif = "NIF.txt";
 
         try {
-            br = new BufferedReader(new FileReader(dni));
-            bw = new BufferedWriter(new FileWriter(nif, false));
+            bw1 = new BufferedWriter(new FileWriter(dni, false));
+            bw2 = new BufferedWriter(new FileWriter(nif, false));
 
-            String txt1 = br.readLine();
+            String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
 
-            String letra = "TRWAGMYFPDXBNJZSQVHLCKE";
+            System.out.println("Dime un numero inicial");
+            int numInicial = tcl.nextInt();
 
-            while (txt1 != null) {
-                while (txt1.length() < 8) {
-                    txt1 = "0" + txt1;
+            System.out.println("Dime un numero Final");
+            int numFinal = tcl.nextInt();
+
+            String num_texto = null;
+
+            int letra_nif;
+            for (int i = numInicial; i <= numFinal; i++) {
+                num_texto = String.valueOf(i);
+                while (num_texto.length() < 8) {
+                    num_texto = "0" + num_texto;
                 }
-                int letra_nif = Integer.parseInt(txt1) % 23;
-                bw.write(txt1 + letra.charAt(letra_nif));
-                bw.newLine();
-                txt1 = br.readLine();
+                bw1.write(num_texto);
+                bw1.newLine();
+                letra_nif = Integer.parseInt(num_texto) % 23;
+                bw2.write(num_texto + letras.charAt(letra_nif));
+                bw2.newLine();
+
             }
 
         } catch (FileNotFoundException e) {
@@ -52,18 +60,16 @@ public class Ficheros_Ej4 {
             System.out.println(e.getMessage());
         } finally {
             try {
-                if (br != null) {
-                    br.close();
+                if (bw1 != null) {
+                    bw1.close();
                 }
-                if (bw != null) {
-                    bw.close();
+                if (bw2 != null) {
+                    bw2.close();
                 }
             } catch (IOException e) {
                 System.out.println("Error al cerrar el fichero");
                 System.out.println(e.getMessage());
             }
         }
-
     }
 }
-

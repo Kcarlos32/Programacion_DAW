@@ -36,14 +36,14 @@ public class Ficheros_Ej3 {
             br1 = new BufferedReader(new FileReader(le));
             bw = new BufferedWriter(new FileWriter(esc, false));
 
-            String txt1 = br1.readLine();
+            String texto1 = br1.readLine();
 
-            while (txt1 != null) {
-                if (txt1.length() >= cant) {
-                    bw.write(txt1);
+            while (texto1 != null) {
+                if (texto1.length() >= cant) {
+                    bw.write(texto1);
                     bw.newLine();
                 }
-                txt1 = br1.readLine();
+                texto1 = br1.readLine();
             }
 
         } catch (FileNotFoundException e) {
