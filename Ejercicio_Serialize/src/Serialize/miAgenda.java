@@ -19,8 +19,11 @@ public class miAgenda implements Serializable {
     private String email;
 
     public miAgenda() {
-
-    }
+        nombre = "Antonio Perez";
+        direccion = "c/ Logroño von Laus 123";
+        email = "ejemplo@email.com";
+        fono = null;
+     }
 
     public miAgenda(String nombre, String direccion, ArrayList<String> fono, String email) {
         this.nombre = nombre;

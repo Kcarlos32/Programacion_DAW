@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Serialize;
+package interfazserializable;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -13,9 +13,10 @@ import java.util.Scanner;
 
 /**
  *
- * @author carcas
+ * @author davher
  */
-public class miAgendaRe {
+public class MiAgendaEscribe {
+
     public static void main(String[] args) throws IOException {
         File f = new File("agenda.dat");
         Scanner flujoEntrada = new Scanner(System.in);
@@ -40,7 +41,7 @@ public class miAgendaRe {
                     otro = flujoEntrada.nextLine();
                     
                 } while (otro.equals("si") || otro.equals("SI"));
-                d.writeObject(new miAgenda(nombre, direcion, lista, email));
+                d.writeObject(new MiAgenda(nombre, direcion, lista, email));
                 System.out.print("Otro contacto? ");
                 otro = flujoEntrada.nextLine();
                 
@@ -49,4 +50,3 @@ public class miAgendaRe {
         }
     }
 }
-
