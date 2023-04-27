@@ -1,0 +1,18 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.daw.calculadoraed;
+
+/**
+ *
+ * @author carcas
+ */
+public class Suma {
+     public double getSuma(double a, double b){
+        return a+b;
+    }
+    public double incrementa(double a, double b){
+        return a+1;
+    }
+}
