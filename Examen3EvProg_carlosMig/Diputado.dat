@@ -1,0 +1,5 @@
+[Diputado {  nombre = Albacete, apellidos = PP, edad = 32 provincia que representa = Hernando, partido politico = Garmendia Gutierrez, numero de despacho = 34 asiento de camara baja = 123 }
+, Diputado {  nombre = Valencia, apellidos = PSOE, edad = 46 provincia que representa = Miguel, partido politico = Hernandez Sorolla, numero de despacho = 46 asiento de camara baja = 12 }
+, Diputado {  nombre = A Coruña, apellidos = PODEMOS, edad = 243 provincia que representa = Anna, partido politico = Rimuela De Abajo, numero de despacho = 24 asiento de camara baja = 78 }
+, Diputado {  nombre = Madrid, apellidos = VOX, edad = 32 provincia que representa = Josefina, partido politico = Olomeda Ponzola, numero de despacho = 51 asiento de camara baja = 231 }
+]
