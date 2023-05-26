@@ -2,15 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Conectar;
+package Practica;
 
-import java.sql.*;
-
+import java.sql.Connection;
+import java.sql.DriverManager;
 /**
  *
  * @author carcas
  */
-public class Conectar {
+public class ConectarVideo {
 
     public static final String URL = "jdbc:mysql://localhost:3306/videoclub";
     public static final String USER = "root";
@@ -26,5 +26,4 @@ public class Conectar {
         }
         return con;
     }
-
 }

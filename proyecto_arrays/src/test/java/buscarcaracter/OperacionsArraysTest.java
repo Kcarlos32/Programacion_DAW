@@ -91,5 +91,14 @@ public class OperacionsArraysTest {
         boolean result = instance.busca(c, v);
         assertEquals(expResult, result);
     }
-    
+    @Test
+    public void testBuscaPrimero() {
+        System.out.println("testBusca");
+        char c = 'o';
+        char[] v = {'o', 'e', 'i', 'o', 'u'};
+        OperacionsArrays instance = new OperacionsArrays();
+        boolean expResult = true;
+        boolean result = instance.busca(c, v);
+        assertEquals(expResult, result);
+    }
 }

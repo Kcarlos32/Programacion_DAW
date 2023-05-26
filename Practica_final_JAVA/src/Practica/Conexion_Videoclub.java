@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package Conectar;
+package Practica;
 
 import java.sql.Connection;
 import javax.swing.JOptionPane;
@@ -11,12 +11,12 @@ import javax.swing.JOptionPane;
  *
  * @author carcas
  */
-public class Conector extends javax.swing.JFrame {
+public class Conexion_Videoclub extends javax.swing.JFrame {
 
     /**
-     * Creates new form cONECTOR
+     * Creates new form Conexion_Videoclub
      */
-    public Conector() {
+    public Conexion_Videoclub() {
         initComponents();
     }
 
@@ -29,14 +29,15 @@ public class Conector extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnAceptar = new javax.swing.JButton();
+        JBtnConectarVideo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("CONEXIÓN CON VIDEOCLUB");
 
-        btnAceptar.setText("CONECTAR");
-        btnAceptar.addActionListener(new java.awt.event.ActionListener() {
+        JBtnConectarVideo.setText("CONECTARSE A BASE DE DATOS");
+        JBtnConectarVideo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAceptarActionPerformed(evt);
+                JBtnConectarVideoActionPerformed(evt);
             }
         });
 
@@ -46,29 +47,25 @@ public class Conector extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnAceptar, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
+                .addComponent(JBtnConectarVideo, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnAceptar, javax.swing.GroupLayout.DEFAULT_SIZE, 288, Short.MAX_VALUE)
+                .addComponent(JBtnConectarVideo, javax.swing.GroupLayout.DEFAULT_SIZE, 288, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
-        
-        Conectar conecta = new Conectar();
+    private void JBtnConectarVideoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBtnConectarVideoActionPerformed
+       ConectarVideo conecta = new ConectarVideo();
         Connection con = conecta.getConexion();
         JOptionPane.showMessageDialog(null, "Conexión establecida con éxito");
-        
-        Interfaz verformulario2 = new Interfaz();
-        verformulario2.setVisible(true);
-    }//GEN-LAST:event_btnAceptarActionPerformed
+    }//GEN-LAST:event_JBtnConectarVideoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -87,27 +84,25 @@ public class Conector extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Conector.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Conexion_Videoclub.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Conector.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Conexion_Videoclub.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Conector.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Conexion_Videoclub.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Conector.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Conexion_Videoclub.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            @Override
             public void run() {
-                new Conector().setVisible(true);
+                new Conexion_Videoclub().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAceptar;
+    private javax.swing.JButton JBtnConectarVideo;
     // End of variables declaration//GEN-END:variables
 }

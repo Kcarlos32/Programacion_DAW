@@ -25,7 +25,7 @@ public class FactorialTest {
     public static void setUpClass() {
          System.out.println("+++++++++++++++++++++++++++++++++++++++++++++");
          System.out.println("································");
-         System.out.println("======= TEST DE ERRORES ========");
+         System.out.println("======= PRUEBA ERRORES ========");
          System.out.println("======= Factorial ========");
          System.out.println("································");
          System.out.println("+++++++++++++++++++++++++++++++++++++++++++++");
@@ -33,7 +33,6 @@ public class FactorialTest {
     
     @AfterAll
     public static void tearDownClass() {
-        System.out.println("Prueba finalizada");
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++");
          System.out.println("································");
          System.out.println("====== PRUEBA FINALIZADA =======");
